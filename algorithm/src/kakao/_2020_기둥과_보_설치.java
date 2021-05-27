@@ -1,6 +1,6 @@
 package kakao;
 
-public class 기둥과_보_설치 {
+public class _2020_기둥과_보_설치 {
 	boolean[][] Pillar; //기둥
 	boolean[][] Bar; //보
 	
@@ -86,10 +86,10 @@ public class 기둥과_보_설치 {
 		// 남은 기둥과 보 개수만큼만 answer 출력
 		int[][] answer = new int[count][3];
 		
-		count = 0;
+		count = 0; // 0으로 초기화
 		
 		for(int x=0; x<=n; x++) { // x좌표를 오름차순으로
-			for(int y=0; y<=n; y++) {
+			for(int y=0; y<=n; y++) { // x좌표 같을 경우 y좌표 기준 오름차순
 				if(Pillar[x][y]) {
 					answer[count][0] = x;
 					answer[count][1] = y;
@@ -98,7 +98,7 @@ public class 기둥과_보_설치 {
 				if(Bar[x][y]) {
 					answer[count][0] = x;
 					answer[count][1] = y;
-					answer[count++][2] = 1; // 기둥은 0
+					answer[count++][2] = 1; // 보는 1
 				}
 			}
 		}
